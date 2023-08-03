@@ -1,5 +1,4 @@
 const Destination = require('../Model/Destination');
-
 // Retrieve a list of all destinations
 exports.getAllDestinations = (req, res) => {
   Destination.find({})
@@ -47,7 +46,6 @@ exports.updateDestination = (req, res) => {
       });
   };
 
-// Retrieve a specific destination by ID
 exports.getDestinationById = (req, res) => {
   Destination.findById(req.params.id)
     .then((destination) => {
@@ -65,7 +63,7 @@ exports.getDestinationById = (req, res) => {
 
 // Retrieve featured destinations
 exports.getFeaturedDestinations = (req, res) => {
-  Destination.find({ featured: true }) // Assuming you have a 'featured' field in your schema
+  Destination.find({ featured: true }) 
     .then((destinations) => {
       res.json(destinations);
     })
@@ -88,4 +86,3 @@ exports.createDestination = (req, res) => {
     });
 };
 
-// Add more functions for update and delete operations if needed

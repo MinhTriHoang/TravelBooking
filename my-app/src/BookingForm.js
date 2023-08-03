@@ -13,14 +13,13 @@ function BookingForm() {
     // Define the booking data
     const bookingData = { name, email, date };
     
-    // Send a POST request to your server
-    axios.post('/api/booking/create', bookingData) // Changed the URL here
+    
+    axios.post('/api/booking/create', bookingData) 
       .then((response) => {
-        // Handle the response as needed, such as displaying a success message or redirecting
+        
         console.log('Booking confirmed:', response.data);
       })
       .catch((error) => {
-        // Handle any errors, such as displaying an error message
         console.error('Something went wrong:', error);
       });
   };

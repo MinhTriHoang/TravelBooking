@@ -1,6 +1,6 @@
 // userRoutes.js
 const express = require('express');
-const UserController = require('../controller/UserController'); // Adjust the path as needed
+const UserController = require('../controller/UserController'); 
 const router = express.Router();
 
 router.get('/', UserController.getAllUsers);

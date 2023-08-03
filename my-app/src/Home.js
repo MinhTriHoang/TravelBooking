@@ -6,7 +6,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get('/api/destinations/featured') // Replace with your actual API endpoint
+      .get('/api/destinations/featured') 
       .then((response) => {
         setFeaturedDestinations(response.data);
       })

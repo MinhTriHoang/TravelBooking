@@ -5,7 +5,7 @@ const {
   createBooking,
   updateBooking,
   cancelBooking,
-} = require('./bookingHandlers'); // Adjust the path as needed
+} = require('./bookingHandlers'); 
 
 const router = express.Router();
 
