@@ -9,7 +9,7 @@ router.get('/', DestinationController.getAllDestinations);
 router.get('/featured', DestinationController.getFeaturedDestinations);
 
 // Retrieve a specific destination by ID
-router.get('/:id', DestinationController.getDestinationById); // Assuming you have this method in your controller
+router.get('/:id', DestinationController.getDestinationById); 
 router.get('/', DestinationController.getAllDestinations);
 router.get('/:destinationId', DestinationController.getDestinationById);
 router.post('/create', DestinationController.createDestination);

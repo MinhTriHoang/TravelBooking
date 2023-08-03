@@ -5,9 +5,9 @@ function Destination() {
   const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
-    // Fetch the destinations from your backend
+    
     axios
-      .get('/api/destinations') // Replace with your actual API endpoint
+      .get('/api/destinations')
       .then((response) => {
         setDestinations(response.data);
       })
@@ -24,7 +24,7 @@ function Destination() {
       ) : (
         <ul>
           {destinations.map((destination, index) => (
-            <li key={index}>{destination.name}</li> // Replace 'name' with the appropriate property from your destination object
+            <li key={index}>{destination.name}</li> 
           ))}
         </ul>
       )}

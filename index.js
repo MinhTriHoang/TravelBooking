@@ -2,16 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db'); // Importing the database connection function
 
-require('dotenv').config({ path: './web.env' }); // Load environment variables
-
+require('dotenv').config({ path: './web.env' }); 
 const app = express();
-const port = process.env.PORT || 3000; // Use the PORT from environment variables
+const port = process.env.PORT || 3000; 
 
-// Import your routes
 const bookingRoutes = require('./server/controller/BookingController');
-const userRoutes = require('./server/Route/userRoutes'); // Adjust as needed
-const destinationRoutes = require('./server/Route/destinationRoutes'); // Adjust as needed
-
+const userRoutes = require('./server/Route/userRoutes'); 
+const destinationRoutes = require('./server/Route/destinationRoutes'); 
 // Connect to the database using the function from config
 connectDB();
 app.use('/api/destinations', destinationRoutes);
